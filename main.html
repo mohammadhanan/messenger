@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- STYLES CSS -->
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/users.css">
+        <link rel="stylesheet" href="assets/css/chat.css">
+        <link rel="stylesheet" href="assets/css/login.css">
+
+        <!-- BOX ICONS CSS-->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <title>Messenger</title>
+    </head>
+    <body id="body">
+        <div id="main-content-of-messenger-app">
+            <div class="l-navbar" id="navbar">
+                <nav class="nav">
+                    <div>
+                        <a href="" class="nav__logo">
+                            <img src="assets/icons/logo.svg" alt="" class="nav__logo-icon">
+                            <span class="nav__logo-text">Messenger</span>
+                        </a>
+        
+                        <div class="nav__toggle" id="nav-toggle">
+                            <i class='bx bx-chevron-right'></i>
+                        </div>
+        
+                        <ul class="nav__list">
+                            <a href="#" class="nav__link active" onclick="Home();">
+                                <i class='bx bx-grid-alt nav__icon'></i>
+                                <span class="nav__text">Home</span>
+                            </a>
+                            <a href="#" class="nav__link" onclick="Users();">
+                                <i class='bx bx-user nav__icon' ></i>
+                                <span class="nav__text">Users</span>
+                            </a>                
+                        </ul>
+                    </div>
+                    <a href="#" class="nav__link" onclick="SignOut();">           
+                        <i class='bx bx-log-out-circle nav__icon'></i>
+                        <span class="nav__text">Logout</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="main-page-of-messenger" id="main-page-of-our-messenger">
+                <div class="header-of-messenger">
+                    <div>
+                        <h1>Messenger<span>.</span></h1>
+                    </div>
+                    <div>
+                        <img src="" alt="" id="header-image-of-main-page" style="border-radius: 50%;">
+                    </div>
+                </div>
+                <div class="search-section-of-messenger">
+                    <div class="search-here-section">
+                        <input type="search" placeholder="search">
+                        <div class="icon-of-search">
+                            <i class='bx bx-search-alt'></i>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            <div class="section-of-friends-in-messenger">
+                <h1 style="margin: 1rem 0rem; font-size: 18px;">Recent Chats</h1>
+                    <ul class="friends-list-in-messenger" id="list-of-users-with-friends">
+                        <li>
+                            <div class="list-contents">
+                                <div class="name-with-image">
+                                    <div>
+                                        <img src="https://www.pngkey.com/png/full/73-730477_first-name-profile-image-placeholder-png.png" alt="">
+                                    </div>
+                                    <div class="user-front-page-details-main">
+                                        <small>Placeholder Image</small>
+                                        <span style="font-size: 11px; padding-left: 10px; color: gray;">Last Message</span>
+                                    </div>
+                                </div>
+                                <div class="icon-of-chat-in-user" onclick="OpenChat();">
+                                    <i class='bx bx-message-rounded'></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-page-of-our-app" id="login-page-id-of-app">
+            <div class="main-part-of-login-page">
+                <h1>Messenger<span>.</span></h1>
+                <div onclick="SignIn();">
+                    Google Sign In
+                </div>
+            </div>
+        </div>
+
+        <div class="section-of-all-registered-users-2" id="all-users-registered-in-our-messenger">
+            <div class="header-of-messenger-2">
+                <div>
+                    <h1>Registered Users<span>.</span></h1>
+                </div>
+                <div>
+                    <img src="" alt="" id="header-image-of-registered-user-section" style="border-radius: 50%;">
+                </div>
+            </div>
+            <div class="search-section-of-messenger-2">
+                <div class="search-here-section">
+                    <input type="search" placeholder="search">
+                    <div class="icon-of-search">
+                        <i class='bx bx-search-alt'></i>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="section-of-friends-in-messenger-2">
+                <ul class="friends-list-in-messenger-2" id="id-of-friends-list-in-messenger-2">
+                    <li>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="chat-box" id="chat-section-of-app-in-messenger">
+            <div class="header-of-chat-box">
+                <div>
+                    <img id="chat-with-user-image-of-messenger" src="" alt="">
+                </div>
+                <div class="details-of-user-chatting">
+                    <span id="chat-with-user-name-of-messenger"></span>
+                    <small>Last Seen 19 Mint Ago</small>
+                </div>
+            </div>
+            <div class="body-of-chat-box">
+                <ul id="chat">
+            </ul>
+            </div>
+            <div class="footer-of-chat-box">
+                <div class="content-of-chat-box-in-footer">
+                    <div class="emoji-div">
+                        <i class="lar la-grin-hearts"></i>
+                    </div>
+                    <input type="text" name="" placeholder="Type your message...." id="message-send-box-messenger">
+                    <div class="image-div-section">
+                        <i class="las la-image"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+    <!-- VENDOR JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase.js"></script>
+    <script src="assets/js/firebase.init.js"></script> 
+    <script src="assets/js/authentication.js"></script>
+
+    <!-- MAIN JS -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/settings.js"></script>
+    <script src="assets/js/FetchUsers.js"></script>
+    <script src="assets/js/ChatWithUser.js"></script>
+</html>

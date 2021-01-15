@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger</title>
+    <style>
+    body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url(background.jpg)no-repeat;
+  background-size: cover;
+  overflow: hidden; 
+}
+
+.loader{
+  background: #111;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader div{
+  background: #fff;
+  width: 16px;
+  height: 32px;
+  margin-left: 10px;
+  animation: loader 1.2s infinite;
+}
+
+@keyframes loader{
+  50%{
+    height: 64px;
+  }
+}
+
+.loader div:nth-child(1){
+  background: #FF9F1A;
+  animation-delay: -0.40s;
+}
+
+.loader div:nth-child(2){
+  background: #FED330;
+  animation-delay: -0.20s;
+}
+
+.loader div:nth-child(3){
+  background: #FFFA65;
+  animation-delay: 0s;
+}
+                           
+    </style>
+  </head>
+  <body>
+
+    <div class="loader">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript">
+    setTimeout(function(){
+      $('.loader').fadeToggle();
+      window.location.href = "main.html";
+    },3000);
+    </script>
+
+  </body>
+</html>

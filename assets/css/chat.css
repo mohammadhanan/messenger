@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+.chat-box {
+    background: #fff;
+    height: 100vh;
+    margin-left: 3rem;
+    overflow-x: hidden;
+    display: none;
+}
+
+.header-of-chat-box {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 3rem;
+}
+
+.header-of-chat-box .details-of-user-chatting {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    padding-left: 20px;
+}
+
+.header-of-chat-box img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.header-of-chat-box .details-of-user-chatting span {
+    color: #333;
+    font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+}
+
+.header-of-chat-box .details-of-user-chatting small {
+    color: #333;
+    font-size: 11px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.body-of-chat-box {
+    height: 85%;
+    overflow-y: scroll;
+}
+
+#chat {
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow-y: scroll;
+    height: 85%;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+
+#chat li {
+    padding: 10px 30px;
+}
+
+#chat h2,
+#chat h3 {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+#chat h3 {
+    color: #bbb;
+}
+
+#chat .entete {
+    margin-bottom: 5px;
+}
+
+#chat .message {
+    padding: 20px;
+    color: #fff;
+    line-height: 25px;
+    max-width: 90%;
+    display: inline-block;
+    text-align: left;
+    border-radius: 5px;
+}
+
+#chat .me {
+    text-align: right;
+}
+
+#chat .you .message {
+    background-color: #58b666;
+}
+
+#chat .me .message {
+    background-color: #6fbced;
+}
+
+.footer-of-chat-box {
+    width: auto;
+    height: 60px;
+    position: fixed;
+    right: 0;
+    left: 5%;
+    bottom: 0;
+    margin: 20px 15px;
+}
+
+.content-of-chat-box-in-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.5rem;
+}
+
+.content-of-chat-box-in-footer .emoji-div {
+    background: #F5A623;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.4s all;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content-of-chat-box-in-footer .emoji-div:hover {
+    opacity: 0.8;
+}
+
+.content-of-chat-box-in-footer .image-div-section {
+    background: #F5A623;
+    padding: 7px 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.4s all;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content-of-chat-box-in-footer .image-div-section:hover {
+    opacity: 0.8;
+}
+
+.content-of-chat-box-in-footer input {
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    outline: none;
+    padding: 0.7rem 2rem;
+    width: 100%;
+    margin: 0px 5px;
+    transition: all 0.4s;
+}
+
+.content-of-chat-box-in-footer input:hover {
+    border: 1px solid #F5A623;
+}
+
+@media (max-width: 896px) {
+    .chat-box {
+        margin-left: 3.5rem;
+    }
+    .content-of-chat-box-in-footer input {
+        width: 80%;
+    }
+    .content-of-chat-box-in-footer {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 770px) {
+    .chat-box {
+        margin-left: 3rem;
+    }
+    .content-of-chat-box-in-footer input {
+        width: 80%;
+    }
+    .content-of-chat-box-in-footer {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .content-of-chat-box-in-footer input {
+        width: 160px;
+    }
+}
+
+@media (max-width: 360px) {
+    .content-of-chat-box-in-footer input {
+        width: 150px;
+        padding: 0.7rem 2rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .content-of-chat-box-in-footer input {
+        width: 100px;
+        padding: 0.7rem 2rem;
+    }
+}
+
+@media (max-height: 700px) {
+    .body-of-chat-box {
+        height: 80%;
+    }
+    #chat {
+        padding-left: 0;
+        margin: 0;
+        list-style-type: none;
+        overflow-y: scroll;
+        height: 80%;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+    }
+}
